@@ -29,5 +29,12 @@ SELECT nombre, apellido FROM usuarios WHERE YEAR(fecha) = '2021';
 SELECT nombre, apellido FROM usuarios WHERE YEAR(fecha) != '2020' OR ISNULL(fecha);
 
 /* Seleccionar registros por dos columnas */
-SELECT nombre, apellido FROM usuarios WHERE email = 'emmanuel@gmail.com' AND password = '1234' ; 
+SELECT nombre, apellido FROM usuarios WHERE email = 'emmanuel@gmail.com' AND password = '1234';
+
+/* Elementos que contengan un texto */
+SELECT * FROM usuarios WHERE nombre LIKE '%o%';
+/* AL PONER LA o ENTRE % TRAE TODOS LOS NOMBRES QUE CONTENGAN UNA o 
+si solo se le pone el % al principio solo trae los elementos que terminen en o (palabra o letra)
+si lo tiene al final es los que terminen con la letra o palabra designada, en este caso la o*/ 
+
 
